@@ -10,16 +10,22 @@ CONFIG = {
   'post_ext' => "md",
 }
 
-
-
-# Usage: rake post name="A name" category="plugin | config" [date="2014-02-15"]
+# Usage: rake post name="A name" [category="plugins | configs"] [date="2014-02-15"]
 desc "Begin a new post in #{CONFIG['posts']}"
 task :post do
   abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])
   name = ENV["name"] || "new post"
   tags = ENV["tags"] || "[]"
-  category = ENV["category"] || "misc"
-  category = "\"#{category.gsub(/-/,' ')}\"" if !category.empty?
+  category = ENV["category"] || ""
+  if category.empty?
+    category = ask("category?", ['p','c'])
+    if category == 'p'
+      category = 'plugins'
+    else
+      category = 'configs'
+    end
+  end
+  category = "#{category.gsub(/-/,' ')}" if !category.empty?
   slug = name.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   begin
     date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
