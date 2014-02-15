@@ -45,8 +45,9 @@ task :post do
   open(filename, 'w') do |post|
     post.puts "---"
     post.puts "name: \"#{name.gsub(/-/,' ')}\""
-    if category=="plugin"
+    if category=="plugins"
       post.puts "doc:"
+      post.puts "type:"
     elsif
       post.puts "box:"
       post.puts "providers:"
