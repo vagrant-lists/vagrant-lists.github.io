@@ -51,8 +51,8 @@ task :post do
       post.puts "box:"
       post.puts "providers:"
     end
-    post.puts 'description: #{desc}'
-    post.puts 'link: #{link}'
+    post.puts "description: #{desc}"
+    post.puts "link: #{link}"
     post.puts "category: #{category}"
     post.puts "tags: #{tags}"
     post.puts "---"
