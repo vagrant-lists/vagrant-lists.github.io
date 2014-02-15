@@ -1,0 +1,4 @@
+name: Community contributed Vagrant plugins
+markdown: redcarpet
+pygments: true
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'CNAME']

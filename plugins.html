@@ -1,0 +1,42 @@
+---
+layout: default
+title: vagrant plugin lists
+---
+  <a href="https://github.com/vagrant-lists/plugins"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
+
+  <div id="main">
+
+    <h1><a href="/">Vagrant plugins</a></h1>
+
+    <p><a href="http://vagrantup.com">Vagrant</a> is an amazing tool for managing virtual machines via a simple to use command line interface. With a simple <code>vagrant up</code> you can be working in a clean environment based on a standard template.</p>
+
+    <p> Vagrant 1.1+ has a plugin infrastructure that allows 3rd party to provide feature additions <a href="http://docs.vagrantup.com/v2/plugins/index.html">Plugins</a>, and this website is simply a list of plugins.</p>
+
+    <h2>Suggest a plugin</h2>
+
+    <p>Do you know of another plugin? <a href="http://github.com/vagrant-lists/plugins/issues">Make a request</a> and we'll add it to the list.</p>
+
+    <p>The list of plugins was last updated on Febrary 15th, 2014.</p>
+
+    <table class="sortable hidable">
+      <thead>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Docs</th><td class="tags">Tags</td></tr>
+      </thead>
+      <tbody>
+        {% assign plugins = site.categories.plugins | sort: 'name' %}
+        {% for plugin in plugins %}
+          <tr>
+            <th scope="row" title="{{ plugin.link }}"><a href="{{ plugin.link }}">{{ plugin.name }}</a></th>
+            <td>{{ plugin.type }}</td>
+            <td>{{ plugin.description }}</td>
+            <td class="doc" title="{{ plugin.doc }}"><a href="{{ plugin.doc }}">{{ plugin.doc | replace_first: "https://wiki.github.com/", "Wiki:"}}</a></td>
+            <td class="tags">{{ plugin.tags }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+
+  <div id="footer">
+    <p>The design of this site is heavily inspired by the lovely <a href="http://vagrantup.com">Vagrant</a> design by <a href="http://www.simonecarletti.com/">Simone Carletti</a>.</p>
+  </div>
+</div>

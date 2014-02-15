@@ -1,0 +1,44 @@
+---
+layout: default
+title: vagrant box recipe/config lists
+---
+  <a href="https://github.com/vagrant-lists/box-configs"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
+
+  <div id="main">
+
+    <h1><a href="/">Vagrant Box configs</a></h1>
+
+    <p><a href="http://vagrantup.com">Vagrant</a> is an amazing tool for managing virtual machines via a simple to use command line interface. With a simple <code>vagrant up</code> you can be working in a clean environment based on a standard template.</p>
+
+    <p> This website is simply a list of box configs to use Vagrant. </p>
+
+    <h2>Suggest a config</h2>
+
+    <p>Do you know of another useful configs? <a href="http://github.com/vagrant-lists/box-configs/issues">Make a request</a> and we'll add it to the list.</p>
+
+    <p>The list of configs was last updated on Febrary 15th, 2014.</p>
+
+    <table class="sortable hidable">
+      <thead>
+        <tr><th>Name</th><th>Supported Providers</th><th>Description</th>
+            <th>Project page</th><th>Base Box</th><th class="tags">Tags</th></tr>
+      </thead>
+      <tbody>
+        {% assign configs = site.categories.configs | sort: 'name' %}
+        {% for config in configs %}
+          <tr>
+            <th scope="row" title="{{ config.link }}"><a href="{{ config.link }}">{{ config.name }}</a></th>
+            <td>{{ config.providers }}</td>
+            <td>{{ config.description }}</td>
+            <td><a href="{{ config.link }}">{{ config.link | replace_first: "https://github.com/", "GH:"}}</a></td>
+            <td>{{ config.box }}</td>
+            <td class="tags">{{ config.tags }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+
+  <div id="footer">
+    <p>The design of this site is heavily inspired by the lovely <a href="http://vagrantup.com">Vagrant</a> design by <a href="http://www.simonecarletti.com/">Simone Carletti</a>.</p>
+  </div>
+</div>
