@@ -1,6 +1,6 @@
 ---
 name: "vagrant mutate"
-type: providers
+type: provider
 description: convert vagrant box for another provider
 link: https://github.com/sciurus/vagrant-mutate
 category: plugins
