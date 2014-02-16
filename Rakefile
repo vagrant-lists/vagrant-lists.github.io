@@ -19,7 +19,7 @@ task :box do
   atts.merge!(common_part('boxes'))
   atts[:link] = get_stdin("link? (eg. https://example.com/)")
   atts[:size] = get_stdin("Size?(eg. 100MB)")
-  atts[:provider] = get_stdin("Supported Provider?(eg. VirualBox)")
+  atts[:provider] = ask_single_provider
   put_post(atts[:filename], atts)
 end # task :box
 
@@ -151,6 +151,24 @@ def ask_plugin_type
     type = "unknown"
   end
   type
+end
+
+def ask_single_provider
+  case ask("Provider?(_Virtualbox, v_Mware, _Lxc, _Kvm, libv_Irt)", ['v','m','l','k','i'])
+  when 'v'
+    provider = "VirtualBox"
+  when 'm'
+    provider = "VMware"
+  when 'l'
+    provider = "Vagrant-LXC"
+  when 'k'
+    provider = "Vagrant-KVM"
+  when 'i'
+    provider = "Vagrant-libvirt"
+  else
+    provider = "unknown"
+  end
+  provider
 end
 
 def get_stdin(message)
