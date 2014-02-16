@@ -18,30 +18,29 @@ task :post do
   tags = ENV["tags"] || "[]"
   category = ENV["category"] || ""
   if category.empty?
-    category = ask("category?(plugin, config)", ['p','c'])
+    category = ask("category?(plugin, config, box)", ['p','c', 'b'])
     if category == 'p'
       category = 'plugins'
+      type = ask_plugin_type
+      link = get_stdin("link? (eg. https://example.com/)")
     elsif category == 'c'
       category = 'configs'
-    end
-  end
-  category = "#{category.gsub(/-/,' ')}" if !category.empty?
-  if category == "plugins"
-    case ask("plugin type?(_Provider, p_Rovisioner, _Command, _Sync)", ['p','r','c','s'])
-    when 'p'
-      type = "provider"
-    when 'r'
-      type = "provisioner"
-    when 'c'
-      type = "command"
-    when 's'
-      type = "sync_folder"
+      link = get_stdin("link? (eg. https://example.com/)")
+      supported = get_stdin("supported providers(eg. virtualbox, vmware)?")
+    elsif category == 'b'
+      category = 'boxes'
+      link = get_stdin("link? (eg. https://example.com/)")
+      size = get_stdin("Size?(eg. 100MB)")
     else
-      type = "unknown"
+      category = 'misc'
+      link = get_stdin("link? (eg. https://example.com/)")
     end
-  else
-    supported = get_stdin("supported providers(eg. virtualbox, vmware)?")
   end
+
+  desc = get_stdin("Description(eg. VirtualBox provider)?:")
+  taglist = get_stdin("Tags?(eg. tag1,tag2)")
+  tags = taglist.downcase.strip.split(',')
+
   slug = name.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   begin
     date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
@@ -54,9 +53,6 @@ task :post do
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
 
-  desc = get_stdin("Description(eg. VirtualBox provider)?:")
-  link = get_stdin("link? (eg. https://example.com/)")
-  tags = get_stdin("tags? [tag1,tag2]")
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
     post.puts "---"
@@ -64,14 +60,21 @@ task :post do
     if category=="plugins"
       post.puts "doc:"
       post.puts "type: #{type}"
-    else
+    elsif category=="configs"
       post.puts "box:"
       post.puts "providers: #{supported}"
+    elsif category=="boxes"
+      post.puts "size: #{size}"
+    else
+      # nothing to do
     end
-    post.puts "description: #{desc}"
     post.puts "link: #{link}"
+    post.puts "description: #{desc}"
     post.puts "category: #{category}"
-    post.puts "tags: #{tags}"
+    post.puts "tags:"
+    tags.each do |t|
+      post.puts" - #{t}"
+    end
     post.puts "---"
   end
 end # task :post
@@ -88,6 +91,22 @@ def ask(message, valid_options)
     answer = get_stdin(message)
   end
   answer
+end
+
+def ask_plugin_type
+  case ask("plugin type?(_Provider, p_Rovisioner, _Command, _Sync)", ['p','r','c','s'])
+  when 'p'
+    type = "provider"
+  when 'r'
+    type = "provisioner"
+  when 'c'
+    type = "command"
+  when 's'
+    type = "sync_folder"
+  else
+    type = "unknown"
+  end
+  type
 end
 
 def get_stdin(message)
