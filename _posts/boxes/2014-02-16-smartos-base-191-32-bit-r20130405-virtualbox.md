@@ -10,4 +10,5 @@ date: 2014-02-16
 link: http://dlc-int.openindiana.org/aszeszo/vagrant/smartos-base191-virtualbox-20130405.box
 size: 265MB
 provider: VirtualBox
+arch: i686
 ---

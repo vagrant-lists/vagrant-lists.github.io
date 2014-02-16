@@ -14,4 +14,5 @@ tags:
 - puppet
 - chef
 date: '2014-02-16'
+arch: i686
 ---

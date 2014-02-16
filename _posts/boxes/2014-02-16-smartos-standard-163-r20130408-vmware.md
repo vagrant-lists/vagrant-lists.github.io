@@ -8,4 +8,5 @@ date: 2014-02-16
 link: http://dlc-int.openindiana.org/aszeszo/vagrant/smartos163-vmware_fusion-20130408.box
 size: 236MB
 provider: VMware
+arch: x86_64
 ---
