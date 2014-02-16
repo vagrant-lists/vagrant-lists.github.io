@@ -1,14 +1,17 @@
 html{color:#000;background:#FFF}
+div {margin: 0px;color:#333;font-family:sans-serif;background:#FFF}
 li{list-style:none}}
+div.listcontent {backgroupnd:#fff;margin-top:20px;padding:3px}
 a{color:#06a;text-decoration:none}
 a:hover{text-decoration:underline}
 a:focus{text-decoration:underline}
+
 /* Sortable tables */
 table{border-collapse:collapse;border-spacing:0}
 table{margin-top:20px;width:100%;background:#f8f8f8;color:#000;border:1px solid #ccc}
 table tr{border:1px solid #ddd}
-table th{padding:3px 6px}
-table td{padding:3px 6px}
+table th{text-align:left;padding:3px 6px;color:#444}
+table td{padding:3px 6px;color:#444}
 table.sortable thead {
     background-color:#eee;
     color:#666666;
