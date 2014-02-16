@@ -19,6 +19,7 @@ task :box do
   atts.merge!(common_part('boxes'))
   atts[:link] = get_stdin("link? (eg. https://example.com/)")
   atts[:size] = get_stdin("Size?(eg. 100MB)")
+  atts[:arch] = ask_arch
   atts[:provider] = ask_single_provider
   put_post(atts[:filename], atts)
 end # task :box
@@ -135,6 +136,21 @@ def ask(message, valid_options)
     answer = get_stdin(message)
   end
   answer
+end
+
+def ask_arch
+  case ask("architecure?(x86_64[6], arm[a], i386[3], arm64[r])",['a','3','6','r'])
+  when '6'
+    'x86_64'
+  when '3'
+    'i686'
+  when 'a'
+    'arm'
+  when 'r'
+    'arm64'
+  else
+    'x86_64'
+  end
 end
 
 def ask_plugin_type
