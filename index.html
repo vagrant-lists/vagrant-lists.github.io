@@ -2,7 +2,7 @@
 layout: default
 title: vagrant plugin lists
 ---
-  <a href="https://github.com/vagrant-lists/vagrant-lists.github.io"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
+{% include header.html %}
 
   <div id="main">
 
@@ -12,8 +12,6 @@ title: vagrant plugin lists
 
     <p> This website is simply listing every projects in an eco-system around Vagrant</p>
 
-    <p>The page was last updated on Febrary 15th, 2014.</p>
-
     <h2> Boxes </h2>
 
   <p><a href="http://vagrantbox.es">Boxes directory (vagrantbox.es)</a></p>
@@ -22,47 +20,13 @@ title: vagrant plugin lists
 
   <p><a href="plugins.html">Plugins listing</a></p>
 
-    <table class="sortable hidable">
-      <thead>
-        <tr><th>Name</th><th>Type</th><th>Description</th><th>Docs</th><td class="tags">Tags</td></tr>
-      </thead>
-      <tbody>
-        {% assign plugins = site.categories.plugins | sort: 'name' %}
-        {% for plugin in plugins %}
-          <tr>
-            <th scope="row" title="{{ plugin.link }}"><a href="{{ plugin.link }}">{{ plugin.name }}</a></th>
-            <td>{{ plugin.type }}</td>
-            <td>{{ plugin.description }}</td>
-            <td class="doc" title="{{ plugin.doc }}"><a href="{{ plugin.doc }}">{{ plugin.doc | replace_first: "https://wiki.github.com/", "Wiki:"}}</a></td>
-            <td class="tags">{{ plugin.tags }}</td>
-          </tr>
-        {% endfor %}
-      </tbody>
-  </table>
+{% include plugins.html %}
  
-  <h2> Configs </h2>
+  <h2> Base Box Configs </h2>
 
   <p><a href="configs.html">Box configs listing</a></p>
 
-    <table class="sortable hidable">
-      <thead>
-        <tr><th>Name</th><th>Supported Providers</th><th>Description</th>
-            <th>Project page</th><th>Base Box</th><th class="tags">Tags</th></tr>
-      </thead>
-      <tbody>
-        {% assign configs = site.categories.configs | sort: 'name' %}
-        {% for config in configs %}
-          <tr>
-            <th scope="row" title="{{ config.link }}"><a href="{{ config.link }}">{{ config.name }}</a></th>
-            <td>{{ config.providers }}</td>
-            <td>{{ config.description }}</td>
-            <td><a href="{{ config.link }}">{{ config.link | replace_first: "https://github.com/", "GH:"}}</a></td>
-            <td>{{ config.box }}</td>
-            <td class="tags">{{ config.tags }}</td>
-          </tr>
-        {% endfor %}
-      </tbody>
-  </table>
+{% include configs.html %}
 
 {% include footer.html %}
 

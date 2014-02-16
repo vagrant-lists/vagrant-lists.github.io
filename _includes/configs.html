@@ -1,0 +1,21 @@
+    <p>The list of configs was last updated on {{ site.time | date_to_long_string }}.</p>
+
+    <table class="sortable hidable">
+      <thead>
+        <tr><th>Name</th><th>Supported Providers</th><th>Description</th>
+            <th>Project page</th><th>Base Box</th><th class="tags">Tags</th></tr>
+      </thead>
+      <tbody>
+        {% assign configs = site.categories.configs | sort: 'name' %}
+        {% for config in configs %}
+          <tr>
+            <th scope="row" title="{{ config.link }}"><a href="{{ config.link }}">{{ config.name }}</a></th>
+            <td>{{ config.providers }}</td>
+            <td>{{ config.description }}</td>
+            <td><a href="{{ config.link }}">{{ config.link | replace_first: "https://github.com/", "GH:"}}</a></td>
+            <td>{{ config.box }}</td>
+            <td class="tags">{{ config.tags }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+  </table>

@@ -1,0 +1,19 @@
+    <p>The list of plugins was last updated on {{ site.time | date_to_long_string }}.</p>
+
+    <table class="sortable hidable">
+      <thead>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Docs</th><td class="tags">Tags</td></tr>
+      </thead>
+      <tbody>
+        {% assign plugins = site.categories.plugins | sort: 'name' %}
+        {% for plugin in plugins %}
+          <tr>
+            <th scope="row" title="{{ plugin.link }}"><a href="{{ plugin.link }}">{{ plugin.name }}</a></th>
+            <td>{{ plugin.type }}</td>
+            <td>{{ plugin.description }}</td>
+            <td class="doc" title="{{ plugin.doc }}"><a href="{{ plugin.doc }}">{{ plugin.doc | replace_first: "https://wiki.github.com/", "Wiki:"}}</a></td>
+            <td class="tags">{{ plugin.tags }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+  </table>
