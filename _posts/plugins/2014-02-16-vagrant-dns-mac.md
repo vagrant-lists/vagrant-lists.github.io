@@ -1,5 +1,5 @@
 ---
-name: "lh vagrant dns"
+name: "lh-vagrant-dns"
 doc:
 type: command
 description: A plugins to manage DNS on Mac host

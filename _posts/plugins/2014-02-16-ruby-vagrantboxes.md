@@ -1,5 +1,5 @@
 ---
-name: "ruby vagrantboxes"
+name: "ruby-vagrantboxes"
 doc:
 type: command
 description: Ruby gem for interacting with the vagrantbox.es api from inside vagrant

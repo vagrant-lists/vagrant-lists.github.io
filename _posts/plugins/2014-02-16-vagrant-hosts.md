@@ -1,5 +1,5 @@
 ---
-name: "vagrant hosts"
+name: "vagrant-hosts"
 doc:
 type: provisioner
 description: manage static DNS on vagrant guests

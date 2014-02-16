@@ -1,5 +1,5 @@
 ---
-name: "vagrant lxc"
+name: "vagrant-lxc"
 doc:
 type: provider
 description: LXC provider for Vagrant

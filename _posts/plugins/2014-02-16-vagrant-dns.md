@@ -1,5 +1,5 @@
 ---
-name: "vagrant dns"
+name: "vagrant-dns"
 doc:
 type: command
 description: A plugin to manage DNS records for vagrant

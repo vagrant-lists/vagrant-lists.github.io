@@ -1,5 +1,5 @@
 ---
-name: "vagrant list"
+name: "vagrant-list"
 doc:
 type: command
 description: add a list command to the vagrant command line interface

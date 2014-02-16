@@ -1,5 +1,5 @@
 ---
-name: "vagrant cachier"
+name: "vagrant-cachier"
 doc:
 type: command
 description: Caffeine reducer - guest packages cache controller
