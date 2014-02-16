@@ -4,36 +4,39 @@ title: vagrant plugin lists
 ---
 {% include header.html %}
 
-  <div id="main">
+<div id="main">
 
-    <h1><a href="/">Vagrant listings</a></h1>
+ <h1><a href="/">Vagrant listings</a></h1>
 
     <p><a href="http://vagrantup.com">Vagrant</a> is an amazing tool for managing virtual machines via a simple to use command line interface. With a simple <code>vagrant up</code> you can be working in a clean environment based on a standard template.</p>
 
     <p> This website is simply listing every projects in an eco-system around Vagrant</p>
 
-    <h2> Report update</h2>
+ <h2> Report update</h2>
+    {% include report.html %}
+    
+ <h2>Vagrantbox.es</h2>
 
-{% include report.html %}
+ <p> Here is yet another listing of boxes than <a href="http://vagrantbox.es">Vagrantbox.es</a>. 
 
-    <h2> Boxes </h2>
+ <h2> Lists </h2>
 
-  <p><a href="http://vagrantbox.es">Boxes directory (vagrantbox.es)</a></p>
+ <div id="tabs">
+  <ul><li><a href="#plugins"> Plugins </a></li>
+      <li><a href="#configs"> Configs </a></li>
+      <li><a href="#boxes"> Boxes </a></li></ul>
+  <div id="plugins">{% include plugins.html %}</div>
+  <div id="configs">{% include configs.html %}</div>
+  <div id="boxes">{% include boxes.html %}</div>
+ </div>
 
-  <p><a href="boxes.html"> Yet another list of boxes here </a></p>
+ <h2> Show in single page</h2>
+  <ul>
+  <li><a href="boxes.html"> Yet another list of boxes here </a></li>
+  <li><a href="plugins.html">Plugins listing</a></li>
+  <li><a href="configs.html">Box configs listing</a></li>
+  </ul>
 
-  <h2> Plugins </h2>
-
-  <p><a href="plugins.html">Plugins listing</a></p>
-
-{% include plugins.html %}
- 
-  <h2> Base Box Configs </h2>
-
-  <p><a href="configs.html">Box configs listing</a></p>
-
-{% include configs.html %}
-
-{% include footer.html %}
+ {% include footer.html %}
 
 </div>
