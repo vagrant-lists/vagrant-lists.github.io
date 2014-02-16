@@ -1,0 +1,62 @@
+#!/usr/bin/env ruby
+
+require 'nokogiri'
+require 'open-uri'
+require 'yaml'
+require 'i18n'
+
+POSSIBLE_TAGS = %w(
+  ubuntu debian arch centos freebds fedora funtoo gentoo omnios openbsd openmandriva
+  opensuse oracle puppet chef scientific slackware
+)
+
+doc = Nokogiri::HTML(open('http://vagrantbox.es'))
+doc.css('tbody tr').each do |row|
+  cells = row.css('th, td')
+  data = {
+    'name'        => cells[0].content.chomp.strip,
+    'description' => cells[0].inner_html.chomp.strip,
+    'provider'    => cells[1].content,
+    'link'        => cells[2].content,
+    'size'        => cells[3].content,
+    'category'    => 'boxes',
+  }
+
+
+  data['note'] = 'Retrived from vagrantbox.es'
+
+  if data['name'] =~ /(x86_64|amd64|x64|\s64|64-bit)/i
+      data['arch'] = 'x64_64'
+  elsif data['name'] =~ /(i386|i686|32bit|\s32)/i
+      data['arch'] = 'i686'
+  else
+      data['arch'] = 'x64_64'
+  end
+
+  data['tags'] = POSSIBLE_TAGS.map do |tag|
+    tag if data['name'] =~ /#{tag}/i
+  end.compact
+
+  # Handle some false positives
+  data['tags'].delete('puppet') if data['name'] =~ /no puppet/i
+  data['tags'].delete('chef') if data['name'] =~ /no chef/i
+  if data['name'] =~ /no ruby\/puppet\/chef/i || data['name'] =~ /vanilla/i
+    data['tags'].delete('chef')
+    data['tags'].delete('puppet')
+  end
+  if data['name'] =~ / no puppet or chef/i
+    data['tags'].delete('chef')
+  end
+
+  today = Time.now.strftime('%Y-%m-%d')
+  data['date'] = today.to_s
+
+  file_name = [I18n.transliterate(data['name']).slice!(0, 63), I18n.transliterate(data['provider'])]
+  file_name = file_name.join('-').downcase.gsub(/(\s+|\(|\)|\.|,|\/)/, '-')
+  file_name = "#{today}-#{file_name}.md".gsub(/-+/, '-')
+
+  File.open("_posts/boxes/#{file_name}", 'w') do |file|
+    file.puts YAML.dump(data)
+    file.puts "---"
+  end
+end
