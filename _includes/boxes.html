@@ -3,16 +3,19 @@ Filter: <input type="text" id="FilterTextBox" name="FilterTextBox"/> (ex. "Virtu
 
     <table class="sortable filterable">
       <thead>
-        <tr><th>Name</th><th>Provider</th><th>URL</th><th class="sorttable_numeric">Size</th></tr>
+        <tr><th>Name</th><th>Architecture</th><th>Provider</th><th>URL</th>
+        <th class="sorttable_numeric">Size</th><th>Registered</th></tr>
       </thead>
       <tbody>
         {% assign boxes = site.categories.boxes | sort: 'name' %}
         {% for box in boxes %}
           <tr>
-            <th scope="row">{{ box.description }}</th>
+            <th scope="row" title="{{ box.description }}">{{ box.name }}</th>
+            <td>{{ box.arch }}</td>
             <td>{{ box.provider }}</td>
-            <td>{{ box.link }}</td>
+            <td title="{{ box.link }}"><a href="{{ box.link }}">{{ box.link | replace_first: 'http://','' | replace_first: 'https://','' | truncate: 30 }}..</a></td>
             <td>{{ box.size }}</td>
+            <td>{{ box.date | date_to_string }}</td>
           </tr>
         {% endfor %}
       </tbody>
