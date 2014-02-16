@@ -2,7 +2,6 @@
 layout: default
 title: vagrant plugin lists
 ---
-{% include header.html %}
 
 <div id="main">
 
@@ -12,13 +11,15 @@ title: vagrant plugin lists
 
     <p> This website is simply listing every projects in an eco-system around Vagrant</p>
 
+    <p> Ideas are heavily come from https://github.com/fgrehm/vagrantboxes-gh-pages </p>
+
  <h2> Report update</h2>
     {% include report.html %}
-    
- <h2>Vagrantbox.es</h2>
+ 
+ <h2>Boxes listing</h2>
 
- <p> Here is yet another listing of boxes than <a href="http://vagrantbox.es">Vagrantbox.es</a>. 
- You are recommended to see <a href="http://vagrantbox.es">Vagrantbox.es</a>
+ <p> Here has an experimental listing of boxes. 
+ You are recommended to see a <a href="http://vagrantbox.es">Vagrantbox.es</a>
  to find up-to-date boxes.
 </p>
 
@@ -27,10 +28,10 @@ title: vagrant plugin lists
  <div id="tabs">
   <ul><li><a href="#plugins"> Plugins </a></li>
       <li><a href="#configs"> Configs </a></li>
-      <li><a href="#boxes"> Boxes </a></li></ul>
+<!--      <li><a href="#boxes"> Boxes </a></li></ul> -->
   <div id="plugins">{% include plugins.html %}</div>
   <div id="configs">{% include configs.html %}</div>
-  <div id="boxes">{% include boxes.html %}</div>
+<!--  <div id="boxes">{% include boxes.html %}</div> -->
  </div>
 
  <h2> Show in single page</h2>
