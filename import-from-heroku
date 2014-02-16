@@ -14,8 +14,8 @@ doc = Nokogiri::HTML(open('http://vagrantbox.es'))
 doc.css('tbody tr').each do |row|
   cells = row.css('th, td')
   data = {
-    'name'        => cells[0].content.chomp.strip,
-    'description' => cells[0].inner_html.chomp.strip,
+    'name'        => "%s"%cells[0].content.chomp.strip,
+    'description' => "%s"%cells[0].inner_html.chomp.strip,
     'provider'    => cells[1].content,
     'link'        => cells[2].content,
     'size'        => cells[3].content,

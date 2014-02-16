@@ -10,7 +10,7 @@ Filter: <input type="text" id="FilterTextBox" name="FilterTextBox"/> (ex. "Virtu
         {% assign boxes = site.categories.boxes | sort: 'name' %}
         {% for box in boxes %}
           <tr>
-            <th scope="row" title="{{ box.description }}">{{ box.name }}</th>
+            <th scope="row" title="{{ box.name | strip_html }}">{{ box.description }}</th>
             <td>{{ box.arch }}</td>
             <td>{{ box.provider }}</td>
             <td><a title="{{ box.link }}" href="{{ box.link }}">{{ box.link | replace_first: 'http://','' | replace_first: 'https://','' | truncate: 30 }}</a></td>
