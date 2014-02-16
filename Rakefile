@@ -52,15 +52,26 @@ end # task :preview
 
 def common_part(category)
   abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])
-  abort("no name specified!") if ENV["name"].empty?
-  name = ENV["name"]
-  desc = get_stdin("Description(eg. VirtualBox provider)?:")
+  if ENV["name"].to_s == ''
+    name = get_stdin("Name? ")
+  else
+    name = ENV["name"]
+  end
+  desc = get_stdin("Description(eg. VirtualBox provider)?: ")
   if ENV["tags"]
     tags = ENV["tags"].downcase.strip.split(',')
   else
     taglist = get_stdin("Tags?(eg. tag1,tag2)")
     tags = taglist.downcase.strip.split(',')
   end
+
+  resp = get_stdin("Any note?:")
+  if resp.empty?
+    note=nil
+  else
+    note=resp
+  end
+
   slug = name.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   begin
     date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
@@ -72,7 +83,8 @@ def common_part(category)
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
-  {:name=>name,:desc=>desc,:tags=>tags,:filename=>filename,:date=>date}
+
+  {:name=>name,:note=>note,:desc=>desc,:tags=>tags,:filename=>filename,:date=>date}
 end
 
 def put_post(filename, attribute)
