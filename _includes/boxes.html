@@ -1,0 +1,20 @@
+
+    <p>The list of boxes was last updated on December 12th, 2013.</p>
+
+    <table class="sortable">
+      <thead>
+        <tr><th>Name</th><th>Provider</th><th>URL</th><th class="sorttable_numeric">Size</th></tr>
+      </thead>
+      <tbody>
+        {% assign boxes = site.categories.boxes | sort: 'name' %}
+        {% for box in boxes %}
+          <tr>
+            <th scope="row">{{ box.description }}</th>
+            <td>{{ box.provider }}</td>
+            <td>{{ box.link }}</td>
+            <td>{{ box.size }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+
