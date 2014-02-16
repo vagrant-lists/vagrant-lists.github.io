@@ -98,7 +98,7 @@ def put_post(filename, attribute)
       when :link then
         post.puts "link: #{val}"
       when :desc then
-        post.puts "description: #{val}"
+        post.puts "description: \"#{val}\""
       when :category then
         post.puts "category: #{val}"
       when :size then
