@@ -18,14 +18,30 @@ task :post do
   tags = ENV["tags"] || "[]"
   category = ENV["category"] || ""
   if category.empty?
-    category = ask("category?", ['p','c'])
+    category = ask("category?(plugin, config)", ['p','c'])
     if category == 'p'
       category = 'plugins'
-    else
+    elsif category == 'c'
       category = 'configs'
     end
   end
   category = "#{category.gsub(/-/,' ')}" if !category.empty?
+  if category == "plugins"
+    case ask("plugin type?(_Provider, p_Rovisioner, _Command, _Sync)", ['p','r','c','s'])
+    when 'p'
+      type = "provider"
+    when 'r'
+      type = "provisioner"
+    when 'c'
+      type = "command"
+    when 's'
+      type = "sync_folder"
+    else
+      type = "unknown"
+    end
+  else
+    supported = get_stdin("supported providers(eg. virtualbox, vmware)?")
+  end
   slug = name.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   begin
     date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
@@ -44,13 +60,13 @@ task :post do
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
     post.puts "---"
-    post.puts "name: \"#{name.gsub(/-/,' ')}\""
+    post.puts "name: \"#{name}\""
     if category=="plugins"
       post.puts "doc:"
-      post.puts "type:"
-    elsif
+      post.puts "type: #{type}"
+    else
       post.puts "box:"
-      post.puts "providers:"
+      post.puts "providers: #{supported}"
     end
     post.puts "description: #{desc}"
     post.puts "link: #{link}"
