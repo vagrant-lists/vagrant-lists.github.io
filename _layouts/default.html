@@ -6,11 +6,24 @@
   <link rel="stylesheet" href="assets/css/main.css" type="text/css" />
   <script src="assets/sorttable.js"></script>
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
   <script type='text/javascript' src='assets/jquery.tipsy.js'></script>
   <link rel="stylesheet" href="assets/css/tipsy.css" type="text/css">
   <script>
   $(".link").tipsy();
   $(".doc").tipsy();
+  $( "#tabs" ).tabs();
+  $(document).ready(function(){
+   $(".filterable tr:has(td)").each(function(){
+   var t = $(this).text().toLowerCase();
+   $("<td class='indexColumn'></td>")
+    .hide().text(t).appendTo(this);});
+   $("#FilterTextBox").keyup(function(){
+   var s = $(this).val().toLowerCase().split(" ");
+   $(".filterable tr:hidden").show();
+   $.each(s, function(){
+   $(".filterable tr:visible .indexColumn:not(:contains('"
+   + this + "'))").parent().hide(); });});});
   </script>
 </head>
 
