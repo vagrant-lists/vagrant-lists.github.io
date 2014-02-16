@@ -2,6 +2,7 @@ require "rubygems"
 require 'rake'
 require 'yaml'
 require 'time'
+require 'erb'
 
 SOURCE = "."
 CONFIG = {
@@ -10,37 +11,56 @@ CONFIG = {
   'post_ext' => "md",
 }
 
-# Usage: rake post name="A name" [category="plugins | configs"] [date="2014-02-15"]
-desc "Begin a new post in #{CONFIG['posts']}"
-task :post do
+# Usage: rake box name="A name" [date="2014-02-15"] [tags="tag1,tag2"]
+desc "Add a new box to List"
+task :box do
+  atts = {}
+  atts[:category] = 'boxes'
+  atts.merge!(common_part('boxes'))
+  atts[:link] = get_stdin("link? (eg. https://example.com/)")
+  atts[:size] = get_stdin("Size?(eg. 100MB)")
+  atts[:provider] = get_stdin("Supported Provider?(eg. VirualBox)")
+  put_post(atts[:filename], atts)
+end # task :box
+
+# Usage: rake plugin name="A name" [date="2014-02-15"] [tags="tag1,tag2"]
+desc "Add a new plugin to List"
+task :plugin do
+  atts = {}
+  atts[:category] = 'plugins'
+  atts.merge!(common_part('plugins'))
+  atts[:type] = ask_plugin_type
+  atts[:link] = get_stdin("link? (eg. https://example.com/)")
+  put_post(atts[:filename], atts)
+end # task :plugin
+
+# Usage: rake recipe name="A name" [date="2014-02-15"] [tags="tag1,tag2"]
+desc "Add a new recipe to List"
+task :recipe do
+  atts = {}
+  atts[:category] = 'configs'
+  atts.merge!(common_part('configs'))
+  atts[:link] = get_stdin("link? (eg. https://example.com/)")
+  atts[:supported] = get_stdin("supported providers(eg. virtualbox, vmware)?")
+  put_post(atts[:filename], atts)
+end # task :recipe
+
+desc "Launch preview environment"
+task :preview do
+  system "jekyll serve -w"
+end # task :preview
+
+def common_part(category)
   abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])
-  name = ENV["name"] || "new post"
-  tags = ENV["tags"] || "[]"
-  category = ENV["category"] || ""
-  if category.empty?
-    category = ask("category?(plugin, config, box)", ['p','c', 'b'])
-    if category == 'p'
-      category = 'plugins'
-      type = ask_plugin_type
-      link = get_stdin("link? (eg. https://example.com/)")
-    elsif category == 'c'
-      category = 'configs'
-      link = get_stdin("link? (eg. https://example.com/)")
-      supported = get_stdin("supported providers(eg. virtualbox, vmware)?")
-    elsif category == 'b'
-      category = 'boxes'
-      link = get_stdin("link? (eg. https://example.com/)")
-      size = get_stdin("Size?(eg. 100MB)")
-    else
-      category = 'misc'
-      link = get_stdin("link? (eg. https://example.com/)")
-    end
-  end
-
+  abort("no name specified!") if ENV["name"].empty?
+  name = ENV["name"]
   desc = get_stdin("Description(eg. VirtualBox provider)?:")
-  taglist = get_stdin("Tags?(eg. tag1,tag2)")
-  tags = taglist.downcase.strip.split(',')
-
+  if ENV["tags"]
+    tags = ENV["tags"].downcase.strip.split(',')
+  else
+    taglist = get_stdin("Tags?(eg. tag1,tag2)")
+    tags = taglist.downcase.strip.split(',')
+  end
   slug = name.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   begin
     date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
@@ -52,37 +72,49 @@ task :post do
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
+  {:name=>name,:desc=>desc,:tags=>tags,:filename=>filename,:date=>date}
+end
 
+def put_post(filename, attribute)
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
     post.puts "---"
-    post.puts "name: \"#{name}\""
-    if category=="plugins"
-      post.puts "doc:"
-      post.puts "type: #{type}"
-    elsif category=="configs"
-      post.puts "box:"
-      post.puts "providers: #{supported}"
-    elsif category=="boxes"
-      post.puts "size: #{size}"
-    else
-      # nothing to do
-    end
-    post.puts "link: #{link}"
-    post.puts "description: #{desc}"
-    post.puts "category: #{category}"
-    post.puts "tags:"
-    tags.each do |t|
-      post.puts" - #{t}"
+    attribute.each do |key, val|
+      case key
+      when :name then
+        post.puts "name: \"#{val}\""
+      when :link then
+        post.puts "link: #{val}"
+      when :desc then
+        post.puts "description: #{val}"
+      when :category then
+        post.puts "category: #{val}"
+      when :size then
+        post.puts "size: #{val}"
+      when :tags then
+        post.puts "tags:"
+        val.each { |t|
+          post.puts" - #{t}"
+        }
+      when :doc then
+        post.puts "doc: #{val}"
+      when :type then
+        post.puts "type: #{val}"
+      when :box then
+        post.puts "box: #{box}"
+      when :provider then
+        post.puts "provider: #{val}"
+      when :supported then
+        post.puts "providers: #{val}"
+      when :filename then
+        # skip
+      else
+        post.puts "#{key}: #{val}"
+      end
     end
     post.puts "---"
   end
-end # task :post
-
-desc "Launch preview environment"
-task :preview do
-  system "jekyll serve -w"
-end # task :preview
+end
 
 def ask(message, valid_options)
   if valid_options
