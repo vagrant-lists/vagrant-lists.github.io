@@ -10,20 +10,46 @@
   <script type='text/javascript' src='assets/jquery.tipsy.js'></script>
   <link rel="stylesheet" href="assets/css/tipsy.css" type="text/css">
   <script>
-  $(".link").tipsy();
-  $(".doc").tipsy();
-  $(function() {$("#tabs").tabs();});
-  $(document).ready(function(){
-   $(".filterable tr:has(td)").each(function(){
-   var t = $(this).text().toLowerCase();
-   $("<td class='indexColumn'></td>")
-    .hide().text(t).appendTo(this);});
-   $("#FilterTextBox").keyup(function(){
-   var s = $(this).val().toLowerCase().split(" ");
-   $(".filterable tr:hidden").show();
-   $.each(s, function(){
-   if (this.trim()) {$(".filterable tr:visible .indexColumn:not(:contains('"
-   + this + "'))").parent().hide(); }});});});
+    $(".link").tipsy();
+    $(".doc").tipsy();
+    $(function() {$("#tabs").tabs();});
+
+    ZeroClipboard.setDefaults({moviePath: '/assets/ZeroClipboard.swf'});
+
+    $(document).ready(function() {
+      var clip = new ZeroClipboard($('.zeroclipboard-button'));
+      clip.on('load', function(client, args) {
+        $(client.htmlBridge).tipsy();
+      });
+
+      clip.on('noflash wrongflash', function(client, args) {
+        $('.zeroclipboard-button').hide();
+      });
+
+      clip.on('complete', function(client, args) {
+        var b = $(client.htmlBridge);
+        b.prop('title', $(this).attr('trigger-title'));
+        b.tipsy('show');
+      });
+
+      $(window).resize(function() {
+        clip.reposition();
+      });
+
+      $(".filterable tr:has(td)").each(function(){
+        var t = $(this).text().toLowerCase();
+        $("<td class='indexColumn'></td>")
+        .hide().text(t).appendTo(this);
+      });
+      $("#FilterTextBox").keyup(function(){
+        var s = $(this).val().toLowerCase().split(" ");
+        $(".filterable tr:hidden").show();
+        $.each(s, function(){ if (this.trim()) {
+          $(".filterable tr:visible .indexColumn:not(:contains('" + this + "'))").parent().hide();
+        }});
+      });
+
+    });
   </script>
 </head>
 

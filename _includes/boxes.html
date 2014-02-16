@@ -3,7 +3,7 @@ Filter: <input type="text" id="FilterTextBox" name="FilterTextBox"/> (ex. "Virtu
 
     <table class="sortable filterable">
       <thead>
-        <tr><th>Name</th><th>Architecture</th><th>Provider</th><th>URL</th>
+        <tr><th>Name</th><th>Architecture</th><th>Provider</th><th>URL</th><th></th>
         <th class="sorttable_numeric">Size</th><th>Registered</th></tr>
       </thead>
       <tbody>
@@ -13,7 +13,8 @@ Filter: <input type="text" id="FilterTextBox" name="FilterTextBox"/> (ex. "Virtu
             <th scope="row" title="{{ box.description }}">{{ box.name }}</th>
             <td>{{ box.arch }}</td>
             <td>{{ box.provider }}</td>
-            <td title="{{ box.link }}"><a href="{{ box.link }}">{{ box.link | replace_first: 'http://','' | replace_first: 'https://','' | truncate: 30 }}..</a></td>
+            <td><a title="{{ box.link }}" href="{{ box.link }}">{{ box.link | replace_first: 'http://','' | replace_first: 'https://','' | truncate: 30 }}</a></td>
+            <td><button class="zeroclipboard-button" data-clipboard-text="{{ box.link }}" trigger-title="Done" title="Copy to clipboard"><x-small>Copy</x-small></button></td>
             <td>{{ box.size }}</td>
             <td>{{ box.date | date_to_string }}</td>
           </tr>
