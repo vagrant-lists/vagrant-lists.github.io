@@ -46,6 +46,17 @@ task :recipe do
   put_post(atts[:filename], atts)
 end # task :recipe
 
+# Usage: rake usecase
+desc "Add a new usecase to List"
+task :usecase do
+  atts = {}
+  atts[:category] = 'usecases'
+  atts.merge!(common_part('usecases'))
+  atts[:link] = get_stdin("link?(eg. https://example.com/)")
+  atts[:supported] = get_stdin("supported providers?(eg. virtualbox, vmware)")
+  put_post(atts[:filename], atts)
+end #task :usecase
+
 desc "Launch preview environment"
 task :preview do
   system "jekyll serve -w"

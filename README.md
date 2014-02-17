@@ -33,18 +33,19 @@ It ask you interactively about attribute of a project.
 
 
 ```
-# Usage: rake post name="A name" [category="plugins | configs"] [date="2014-02-15"]
+# Usage: rake (box|recipe|plugin|usecase) [name="A name"] [date="2014-02-15"] [tag="tag1,tag2"]
 ```
 
 Here is an example.
 ```
-$ rake post name="item name"
-category?(plugin, config) _p_
-plugin type?(_Provider, p_Rovisioner, _Command, _Sync) _p_
-Description(eg. VirtualBox provider)?: _It is plugin_
-link? (eg. https://example.com/): _https://github.com/author/project_
-"tags? [tag1,tag2]: _linux, plugin_
+$ rake plugin
+plugin type?(_Provider, p_Rovisioner, Command, _Sync) p
+Description(eg. VirtualBox provider)?: It is plugin
+link? (eg. https://example.com/): https://github.com/author/project
+"tags? [tag1,tag2]:  linux, plugin
 ```
+
+You can do `rake box`, `rake recipe`, `rake usecase` and `rake plugin`
 
 ## Preview a result
 
