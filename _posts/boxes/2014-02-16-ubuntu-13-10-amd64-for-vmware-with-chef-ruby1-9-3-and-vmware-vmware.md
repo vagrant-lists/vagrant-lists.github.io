@@ -6,7 +6,7 @@ link: http://brennovich.s3.amazonaws.com/saucy64_vmware_fusion.box
 size: 536M
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - ubuntu
 - chef

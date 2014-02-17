@@ -6,7 +6,7 @@ link: https://github.com/downloads/stefancocora/openbsd_amd64-vagrant/openbsd50_
 size: 279.7MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - openbsd
 - puppet

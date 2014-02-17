@@ -6,7 +6,7 @@ link: https://lxmx-vm.s3.amazonaws.com/vagrant/boxes/lxmx_gentoo-2013.05_chef-11
 size: 357MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - gentoo
 - chef

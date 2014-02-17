@@ -7,7 +7,7 @@ link: https://dl.dropboxusercontent.com/s/mfurnvstqoj8w47/gentoo-20131024-amd64-
 size: 279.7 MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - gentoo
 date: '2014-02-16'

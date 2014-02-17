@@ -6,7 +6,7 @@ link: https://dl.dropbox.com/u/14741389/vagrantboxes/lucid64-lamp.box
 size: 343MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - ubuntu
 date: '2014-02-16'

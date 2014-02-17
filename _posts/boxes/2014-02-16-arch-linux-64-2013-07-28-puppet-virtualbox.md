@@ -8,7 +8,7 @@ link: https://dl.dropboxusercontent.com/u/9213047/arch64_2013-07-28.box
 size: 533MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - arch
 - puppet

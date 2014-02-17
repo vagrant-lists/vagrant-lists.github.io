@@ -6,7 +6,7 @@ link: https://dl.dropbox.com/u/5595111/precise64-kohadeps.box
 size: 413MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - ubuntu
 date: '2014-02-16'

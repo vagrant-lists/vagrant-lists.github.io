@@ -6,7 +6,7 @@ link: http://ergonlogic.com/files/boxes/debian-LAMP-current.box
 size: 388MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - debian
 date: '2014-02-16'

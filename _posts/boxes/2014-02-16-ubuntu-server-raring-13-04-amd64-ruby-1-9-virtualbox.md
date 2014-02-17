@@ -8,7 +8,7 @@ link: https://dl.dropboxusercontent.com/u/547671/thinkstack-raring64.box
 size: 644MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - ubuntu
 - puppet

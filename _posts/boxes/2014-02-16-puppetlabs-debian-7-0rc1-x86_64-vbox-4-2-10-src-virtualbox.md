@@ -6,7 +6,7 @@ link: http://puppet-vagrant-boxes.puppetlabs.com/debian-70rc1-x64-vbox4210.box
 size: 302MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - debian
 - puppet

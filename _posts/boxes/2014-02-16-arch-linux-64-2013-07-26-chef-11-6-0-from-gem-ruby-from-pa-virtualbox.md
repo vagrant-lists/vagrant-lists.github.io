@@ -6,7 +6,7 @@ link: http://iweb.dl.sourceforge.net/project/flowboard-vagrant-boxes/arch64-2013
 size: 466.7 MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - arch
 - chef

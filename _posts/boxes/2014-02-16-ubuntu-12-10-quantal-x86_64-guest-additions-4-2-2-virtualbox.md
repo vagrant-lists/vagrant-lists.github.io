@@ -6,7 +6,7 @@ link: https://github.com/downloads/roderik/VagrantQuantal64Box/quantal64.box
 size: 402MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - ubuntu
 date: '2014-02-16'

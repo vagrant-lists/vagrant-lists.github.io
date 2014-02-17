@@ -8,7 +8,7 @@ link: http://grahamc.com/vagrant/ubuntu-12.04-omnibus-chef.box
 size: 372M
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - ubuntu
 - puppet

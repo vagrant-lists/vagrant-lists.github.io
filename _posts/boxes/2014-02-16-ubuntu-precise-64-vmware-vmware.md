@@ -6,7 +6,7 @@ link: http://files.vagrantup.com/precise64_vmware.box
 size: 321MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - ubuntu
 date: '2014-02-16'

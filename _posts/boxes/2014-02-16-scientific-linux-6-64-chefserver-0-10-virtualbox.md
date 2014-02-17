@@ -6,7 +6,7 @@ link: http://download.frameos.org/sl6-64-chefserver-0.10.box
 size: 657MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - chef
 - scientific

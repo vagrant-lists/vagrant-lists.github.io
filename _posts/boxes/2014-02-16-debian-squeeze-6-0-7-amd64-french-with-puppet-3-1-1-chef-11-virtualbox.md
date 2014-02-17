@@ -8,7 +8,7 @@ link: http://public.sphax3d.org/vagrant/squeeze64.box
 size: 294.19MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - debian
 - puppet

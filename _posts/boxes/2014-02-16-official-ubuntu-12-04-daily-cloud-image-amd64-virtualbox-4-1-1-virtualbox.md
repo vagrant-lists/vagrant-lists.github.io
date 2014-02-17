@@ -6,7 +6,7 @@ link: http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-clou
 size: 341M
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - ubuntu
 date: '2014-02-16'

@@ -6,7 +6,7 @@ link: http://dl.dropbox.com/u/13510779/lxc-raring-amd64-2013-07-12.box
 size: 92M
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - ubuntu
 - puppet

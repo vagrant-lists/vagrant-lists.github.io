@@ -6,7 +6,7 @@ link: https://dl.dropboxusercontent.com/s/x1085661891dhkz/lxc-centos6.5-2013-12-
 size: 435M
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - centos
 - puppet

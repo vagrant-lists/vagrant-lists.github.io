@@ -8,7 +8,7 @@ link: http://cloud-images.ubuntu.com/vagrant/saucy/current/saucy-server-cloudimg
 size: 309M
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - ubuntu
 date: '2014-02-16'

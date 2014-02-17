@@ -6,7 +6,7 @@ link: http://dl.dropbox.com/u/54390273/vagrantboxes/Squeeze64_VirtualBox4.2.4.bo
 size: 372MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - debian
 date: '2014-02-16'

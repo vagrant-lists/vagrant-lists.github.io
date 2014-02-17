@@ -8,7 +8,7 @@ link: https://www.dropbox.com/s/si19tbftilcuipz/debian-7.0-amd64.box
 size: 302MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - debian
 - puppet

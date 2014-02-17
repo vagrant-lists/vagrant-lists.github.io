@@ -6,7 +6,7 @@ link: https://s3.amazonaws.com/itmat-public/centos-6.3-chef-10.14.2.box
 size: 445MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - centos
 - chef

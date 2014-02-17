@@ -6,7 +6,7 @@ link: https://dl.dropboxusercontent.com/u/67225617/lxc-vagrant/lxc-wheezy64-pupp
 size: 102.5MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - debian
 - puppet

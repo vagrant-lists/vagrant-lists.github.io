@@ -8,7 +8,7 @@ link: https://www.dropbox.com/s/gxouugzbnjlny1k/debian-7.0-amd64-minimal.box
 size: 280MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - debian
 date: '2014-02-16'

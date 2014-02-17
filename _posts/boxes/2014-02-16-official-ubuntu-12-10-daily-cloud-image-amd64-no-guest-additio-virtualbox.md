@@ -6,7 +6,7 @@ link: http://cloud-images.ubuntu.com/vagrant/quantal/current/quantal-server-clou
 size: 298M
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - ubuntu
 date: '2014-02-16'

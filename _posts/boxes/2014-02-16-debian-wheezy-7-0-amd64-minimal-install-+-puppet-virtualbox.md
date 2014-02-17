@@ -6,7 +6,7 @@ link: https://www.dropbox.com/s/23gupgb0xompvkm/Wheezy64.box?dl=1
 size: 462MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - debian
 - puppet

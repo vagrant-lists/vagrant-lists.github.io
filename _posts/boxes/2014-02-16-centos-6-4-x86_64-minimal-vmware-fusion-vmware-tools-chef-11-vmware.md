@@ -7,7 +7,7 @@ link: https://dl.dropbox.com/u/5721940/vagrant-boxes/vagrant-centos-6.4-x86_64-v
 size: 545.94MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - centos
 - puppet

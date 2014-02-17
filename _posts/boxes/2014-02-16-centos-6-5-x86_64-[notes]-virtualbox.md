@@ -6,7 +6,7 @@ link: https://github.com/2creatives/vagrant-centos/releases/download/v6.5.1/cent
 size: 271.2 MiB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - centos
 date: '2014-02-16'

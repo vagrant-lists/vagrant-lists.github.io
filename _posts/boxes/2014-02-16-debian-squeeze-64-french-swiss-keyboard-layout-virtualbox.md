@@ -6,7 +6,7 @@ link: http://dl.dropbox.com/u/937870/VMs/squeeze64.box
 size: 264MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - debian
 date: '2014-02-16'

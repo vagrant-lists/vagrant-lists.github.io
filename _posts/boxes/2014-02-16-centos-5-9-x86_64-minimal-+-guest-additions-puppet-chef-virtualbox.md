@@ -6,7 +6,7 @@ link: http://tag1consulting.com/files/centos-5.9-x86-64-minimal.box
 size: 356MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - centos
 - puppet

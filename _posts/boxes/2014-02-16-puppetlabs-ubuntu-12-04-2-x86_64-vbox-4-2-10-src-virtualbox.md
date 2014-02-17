@@ -6,7 +6,7 @@ link: http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-12042-x64-vbox421
 size: 400MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - ubuntu
 - puppet

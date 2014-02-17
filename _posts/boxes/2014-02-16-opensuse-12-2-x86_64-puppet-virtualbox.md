@@ -6,7 +6,7 @@ link: http://sourceforge.net/projects/opensusevagrant/files/12.2/opensuse-12.2-6
 size: 552MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - opensuse
 - puppet

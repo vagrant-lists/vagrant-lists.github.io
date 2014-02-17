@@ -6,7 +6,7 @@ link: https://lxmx-vm.s3.amazonaws.com/vagrant/boxes/lxmx_funtoo-2013.06_chef-11
 size: 467MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - funtoo
 - chef

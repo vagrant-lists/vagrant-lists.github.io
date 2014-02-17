@@ -6,7 +6,7 @@ link: https://dl.dropboxusercontent.com/u/86066173/fedora-19.box
 size: 400MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - fedora
 - puppet

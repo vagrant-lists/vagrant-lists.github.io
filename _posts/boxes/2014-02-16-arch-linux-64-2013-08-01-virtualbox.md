@@ -6,7 +6,7 @@ link: https://dl.dropboxusercontent.com/u/31112574/arch64-20130801.box
 size: 578MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - arch
 date: '2014-02-16'

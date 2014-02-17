@@ -6,7 +6,7 @@ link: https://dl.dropbox.com/s/n5o3gfdgjc3ekhl/oracle59.box
 size: 613MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - oracle
 - puppet

@@ -6,7 +6,7 @@ link: http://f.willianfernandes.com.br/vagrant-boxes/DebianSqueeze64.box
 size: 272MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - debian
 - puppet

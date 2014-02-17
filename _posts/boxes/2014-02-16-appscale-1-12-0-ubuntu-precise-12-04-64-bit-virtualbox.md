@@ -6,7 +6,7 @@ link: http://download.appscale.com/download/AppScale%201.12.0%20VirtualBox%20Ima
 size: 1900 MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - ubuntu
 date: '2014-02-16'

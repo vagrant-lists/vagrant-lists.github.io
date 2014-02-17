@@ -6,7 +6,7 @@ link: https://dl.dropboxusercontent.com/u/197673519/debian-7.2.0.box
 size: 295MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - debian
 date: '2014-02-16'

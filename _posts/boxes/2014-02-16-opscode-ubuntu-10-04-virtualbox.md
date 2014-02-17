@@ -6,7 +6,7 @@ link: http://opscode-vagrant-boxes.s3.amazonaws.com/ubuntu10.04-gems.box
 size: 367MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - ubuntu
 date: '2014-02-16'

@@ -8,7 +8,7 @@ link: http://shonky.info/centos64.box
 size: 519.1MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - centos
 date: '2014-02-16'

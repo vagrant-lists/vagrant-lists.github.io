@@ -6,7 +6,7 @@ link: http://dl.dropbox.com/u/4031118/Vagrant/ubuntu-12.04.1-server-i686-virtual
 size: 389MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - ubuntu
 date: '2014-02-16'

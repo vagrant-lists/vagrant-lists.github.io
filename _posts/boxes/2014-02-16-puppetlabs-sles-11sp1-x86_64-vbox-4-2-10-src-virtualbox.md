@@ -6,7 +6,7 @@ link: http://puppet-vagrant-boxes.puppetlabs.com/sles-11sp1-x64-vbox4210.box
 size: 519MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - puppet
 date: '2014-02-16'

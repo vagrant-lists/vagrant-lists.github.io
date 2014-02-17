@@ -6,7 +6,7 @@ link: http://puppet-vagrant-boxes.puppetlabs.com/debian-607-x64-vbox4210-nocm.bo
 size: 249MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - debian
 date: '2014-02-16'

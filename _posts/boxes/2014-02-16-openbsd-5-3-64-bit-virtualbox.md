@@ -6,7 +6,7 @@ link: https://dl.dropboxusercontent.com/u/12089300/VirtualBox/openbsd53_amd64.bo
 size: 303MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - openbsd
 date: '2014-02-16'

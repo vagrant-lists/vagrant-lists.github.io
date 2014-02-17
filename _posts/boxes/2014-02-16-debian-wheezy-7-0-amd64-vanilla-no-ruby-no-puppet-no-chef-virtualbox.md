@@ -6,7 +6,7 @@ link: https://dl.dropboxusercontent.com/s/xymcvez85i29lym/vagrant-debian-wheezy6
 size: 242MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - debian
 date: '2014-02-16'

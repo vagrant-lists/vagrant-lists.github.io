@@ -10,7 +10,7 @@ link: http://static.stasiak.at/fedora-18-x86-2.box
 size: 635MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - fedora
 - chef

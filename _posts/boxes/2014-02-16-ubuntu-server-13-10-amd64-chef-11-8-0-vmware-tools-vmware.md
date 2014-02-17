@@ -6,7 +6,7 @@ link: http://shopify-vagrant.s3.amazonaws.com/ubuntu-13.10_vmware.box
 size: 501MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - ubuntu
 - chef

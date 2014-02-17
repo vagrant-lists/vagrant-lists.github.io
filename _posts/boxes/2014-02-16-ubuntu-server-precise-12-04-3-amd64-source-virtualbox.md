@@ -8,7 +8,7 @@ link: https://oss-binaries.phusionpassenger.com/vagrant/boxes/ubuntu-12.04.3-amd
 size: 547MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - ubuntu
 date: '2014-02-16'

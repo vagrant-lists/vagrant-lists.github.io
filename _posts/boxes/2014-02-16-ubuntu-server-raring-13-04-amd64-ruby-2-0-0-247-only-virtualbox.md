@@ -8,7 +8,7 @@ link: https://dl.dropboxusercontent.com/s/o5i10hcu57jamg8/ubuntu64-ruby2.box
 size: 729MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - ubuntu
 date: '2014-02-16'

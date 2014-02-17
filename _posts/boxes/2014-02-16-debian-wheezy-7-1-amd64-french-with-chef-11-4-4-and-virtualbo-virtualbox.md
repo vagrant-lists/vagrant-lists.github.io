@@ -7,7 +7,7 @@ link: http://downloads.shadoware.org/wheezy64.box
 size: 388MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - debian
 - chef

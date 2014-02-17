@@ -8,7 +8,7 @@ link: https://dl.dropboxusercontent.com/s/r5okkx8330h3tzh/vagrant-centos-5.10-x8
 size: 653MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - centos
 - puppet

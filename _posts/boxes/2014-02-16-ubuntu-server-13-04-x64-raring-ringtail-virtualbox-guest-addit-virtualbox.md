@@ -8,7 +8,7 @@ link: http://goo.gl/Y4aRr
 size: 498MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - ubuntu
 - puppet

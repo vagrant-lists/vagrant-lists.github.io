@@ -8,7 +8,7 @@ link: https://googledrive.com/host/0B-J3zLLFd9HMLUhkckZBWi1xVlE/s9s_clustercontr
 size: 390MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - ubuntu
 date: '2014-02-16'

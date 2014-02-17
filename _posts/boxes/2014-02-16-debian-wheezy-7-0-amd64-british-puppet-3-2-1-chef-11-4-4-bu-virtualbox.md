@@ -8,7 +8,7 @@ link: http://vagrantboxes.footballradar.com/wheezy64.box
 size: 295.8MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - debian
 - puppet

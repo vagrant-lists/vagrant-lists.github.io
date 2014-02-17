@@ -8,7 +8,7 @@ link: http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130
 size: 494MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - centos
 - puppet

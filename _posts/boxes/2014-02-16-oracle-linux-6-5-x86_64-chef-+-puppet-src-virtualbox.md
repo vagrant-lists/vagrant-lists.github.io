@@ -6,7 +6,7 @@ link: https://dl.dropbox.com/s/613uhl43ekqzami/oraclelinux-6-x86_64.box
 size: 684MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - oracle
 - puppet

@@ -6,7 +6,7 @@ link: http://shopify-vagrant.s3.amazonaws.com/ubuntu-12.04_vmware.box
 size: 470.7MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - ubuntu
 - chef

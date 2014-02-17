@@ -8,7 +8,7 @@ link: https://dl.dropboxusercontent.com/s/odnew2tnliqft9o/debian7-openresty.box
 size: 355MB
 category: boxes
 note: Retrived from vagrantbox.es
-arch: x64_64
+arch: x86_64
 tags:
 - debian
 date: '2014-02-16'
