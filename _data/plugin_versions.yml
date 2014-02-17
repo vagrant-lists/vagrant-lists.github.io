@@ -10,3 +10,5 @@ vagrant-list: 0.0.6
 vagrant-cachier: 0.5.1
 vagrant-dns: 0.0.6
 vagrant-kvm: 0.1.4
+vagrant-windows: 1.5.1
+vagrant-hp: 0.1.3
