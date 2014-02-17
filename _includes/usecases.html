@@ -1,0 +1,19 @@
+    <table class="sortable hidable">
+      <thead>
+        <tr><th>Name</th><th>Supported Providers</th><th>Description</th>
+            <th>Project page</th><th>Base Box</th><th class="tags">Tags</th></tr>
+      </thead>
+      <tbody>
+        {% assign usecases = site.categories.usecases | sort: 'name' %}
+        {% for item in usecases %}
+          <tr>
+            <th scope="row" title="{{ item.link }}"><a href="{{ item.link }}">{{ item.name }}</a></th>
+            <td>{{ item.providers }}</td>
+            <td>{{ item.description }}</td>
+            <td><a href="{{ item.link }}">{{ item.link | replace_first: "https://github.com/", "GH:"}}</a></td>
+            <td>{{ item.box }}</td>
+            <td class="tags">{{ item.tags }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+  </table>
