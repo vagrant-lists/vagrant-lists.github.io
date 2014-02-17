@@ -51,6 +51,39 @@ task :preview do
   system "jekyll serve -w"
 end # task :preview
 
+
+# Usage: rake plugin_version
+desc "Check gems versions and store to _data"
+task :plugin_version do
+  version_data = {}
+  plugin_filelist = FileList.new('_posts/plugins/*.md')
+  plugin_filelist.each do |file|
+    open(file,'r').each do |line|
+        if m = /name:\s\"(?<plugin>.+)\"/.match(line)
+          plugin_name = m[:plugin]
+          puts "processing #{plugin_name}"
+          ver = gems_version(plugin_name)
+          if ver
+            version_data[plugin_name] = ver
+          end
+        end
+    end
+  end
+  outfile = File.join('_data/plugin_versions.yml')
+  open(outfile,'w') do |outf|
+    outf.puts YAML.dump(version_data)
+  end
+end
+
+
+def gems_version(plugin)
+  ans = `gem query -n #{plugin} --remote`
+  if m = /\((?<version>[0-9\.]+)\)/.match(ans)
+    return m[:version]
+  end
+  nil
+end
+
 def common_part(category)
   abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])
   if ENV["name"].to_s == ''

@@ -1,0 +1,12 @@
+---
+lh-vagrant-dns: 0.0.6
+vagrant-hosts: 2.1.2
+landrush: 0.10.0
+vagrant-libvirt: 0.0.15
+vagrant-mutate: 0.2.5
+sahara: 0.0.16
+vagrant-lxc: 0.7.0
+vagrant-list: 0.0.6
+vagrant-cachier: 0.5.1
+vagrant-dns: 0.0.6
+vagrant-kvm: 0.1.4
