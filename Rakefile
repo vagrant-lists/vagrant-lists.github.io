@@ -66,7 +66,9 @@ end # task :preview
 # Usage: rake plugin_version
 desc "Check gems versions and store to _data"
 task :plugin_version do
-  version_data = {}
+  # load previous versions file.
+  version_data = YAML.load_file(File.join('_data/plugin_versions.yml'))
+  # update versions.
   plugin_filelist = FileList.new('_posts/plugins/*.md')
   plugin_filelist.each do |file|
     open(file,'r').each do |line|
@@ -80,6 +82,7 @@ task :plugin_version do
         end
     end
   end
+  #
   outfile = File.join('_data/plugin_versions.yml')
   open(outfile,'w') do |outf|
     outf.puts YAML.dump(version_data)
@@ -89,7 +92,7 @@ end
 
 def gems_version(plugin)
   ans = `gem query -n #{plugin} --remote`
-  if m = /\((?<version>[0-9\.]+)\)/.match(ans)
+  if m = /^#{plugin}\s+\((?<version>[0-9\.]+)\)/.match(ans)
     return m[:version]
   end
   nil
