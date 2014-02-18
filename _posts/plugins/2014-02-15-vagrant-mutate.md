@@ -1,6 +1,6 @@
 ---
 name: "vagrant-mutate"
-type: provider
+type: provisioner
 description: convert vagrant box for another provider
 doc:
 link: https://github.com/sciurus/vagrant-mutate
