@@ -1,0 +1,8 @@
+---
+layout: none
+title: vagrant boxes
+---
+{ vagrantboxes:
+  [ {% assign items = site.categories.boxes | sort: 'name' %}{% for item in items %}{{ item | jsonify }},{% endfor %}
+  ]
+}
