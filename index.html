@@ -2,6 +2,7 @@
 layout: default
 title: vagrant plugin lists
 ---
+{% include header.html %}
 
 <div id="main">
 
@@ -18,17 +19,28 @@ title: vagrant plugin lists
  
  <h2>Plugins listing</h2>
 
- <p>  You can look at a <a href="https://github.com/mitchellh/vagrant/wiki/Available-Vagrant-Plugins">Vagrant-wiki</a> page for available vagrant plugins</p>
+{% assign plugins = site.categories.plugins %}
+
+ <p> Here lists {{ plugins.size }} plugins </p>
+
+ <p>  You can also look at a <a href="https://github.com/mitchellh/vagrant/wiki/Available-Vagrant-Plugins">Vagrant-wiki</a> page for available vagrant plugins</p>
+ 
+ 
 
  <h2>Boxes listing</h2>
 
- <p> Here has an experimental listing of boxes.
+{% assign boxes = site.categories.boxes %}
+ <p> Here has an experimental listing of boxes.There are {{ boxes.size}} boxes listed. </p>
+ 
+ <p>
  Official boxes are listed on <a href="https://github.com/mitchellh/vagrant/wiki/Available-Vagrant-Boxes">Vagrant-wiki</a>.
  You are recommended to see a <a href="http://vagrantbox.es">Vagrantbox.es</a>
  to find community boxes.
 </p>
 
  <h2> Lists </h2>
+
+<div id="filter" class="right">Filter: <input type="text" id="FilterTextBox" name="FilterTextBox"/> (ex. "VirtualBox ArchLinux")</div>
 
  <div id="tabs">
   <ul><li><a href="#plugins"> Plugins </a></li>

@@ -3,6 +3,8 @@ layout: default
 title: vagrant plugin lists
 ---
 
+{% include header.html %}
+
   <div id="main">
 
     <h1><a href="/">Vagrant plugins</a></h1>
@@ -16,6 +18,8 @@ title: vagrant plugin lists
     <h2>Suggest a plugin</h2>
 
 {% include report.html %}
+
+Filter: <input type="text" id="FilterTextBox" name="FilterTextBox"/> (ex. "VirtualBox ArchLinux")
 
 {% include plugins.html %}
 

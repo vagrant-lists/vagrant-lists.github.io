@@ -3,6 +3,8 @@ layout: default
 title: vagrant boxes
 ---
 
+{% include header.html %}
+
   <div id="main">
 
     <h1><a href="/">Vagrant Boxes</a></h1>
@@ -11,6 +13,8 @@ title: vagrant boxes
 
     <p> This website is simply a list of boxes. </p>
     <p>The list was last updated on {{ site.time | date_to_long_string }}.</p>
+
+Filter: <input type="text" id="FilterTextBox" name="FilterTextBox"/> (ex. "VirtualBox ArchLinux")
 
 {% include boxes.html %}
 

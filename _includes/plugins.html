@@ -1,6 +1,6 @@
-    <table class="sortable hidable">
+  <table class="sortable hidable filterable">
       <thead>
-        <tr><th>Name</th><th>Version</th><th>Type</th><th>Description</th><th>Docs</th><td class="tags">Tags</td></tr>
+        <tr title="▲click to sort▲"><th>Name</th><th>Version</th><th>Type</th><th>Description</th><th>Docs</th><td class="tags">Tags</td></tr>
       </thead>
       <tbody>
         {% assign plugins = site.categories.plugins | sort: 'name' %}

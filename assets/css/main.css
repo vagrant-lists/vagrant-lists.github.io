@@ -2,9 +2,13 @@ html{color:#000;background:#FFF}
 div {margin: 0px;color:#333;font-family:sans-serif;background:#FFF}
 li{list-style:none}}
 div.listcontent {backgroupnd:#fff;margin-top:20px;padding:3px}
-a{color:#06a;text-decoration:none}
-a:hover{text-decoration:underline}
-a:focus{text-decoration:underline}
+h1 {line-height: 200%;color:#000;font-weight:bold;font-size:50px;border-bottom:1px solid #eee}
+h1 a {color: #000;text-decoration:none}
+h1 a:hover{text-decoration:none}
+h1 a:focus{text-decoration:none}
+p a{color:#06a;text-decoration:none}
+p a:hover{text-decoration:underline}
+p a:focus{text-decoration:underline}
 
 /* Sortable tables */
 table{border-collapse:collapse;border-spacing:0}
@@ -19,3 +23,5 @@ table.sortable thead {
     cursor: default;
 }
 table.hidable .tags { display: none; }
+div.right {text-align: right;}
+div#filter {font-size: 20px;line-height: 150%;}
