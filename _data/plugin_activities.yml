@@ -1,0 +1,115 @@
+---
+lh-vagrant-dns:
+  "last": '2013-05-10'
+  "commits": 0
+vagrant-aws:
+  "last": '2013-12-17'
+  "commits": 13
+vagrant-cloudstack:
+  "last": '2014-02-21'
+  "commits": 30
+vagrant-vcloud:
+  "last": '2014-01-21'
+  "commits": 7
+vagrant-hosts:
+  "last": '2013-12-24'
+  "commits": 6
+vagrant-rspec-ci:
+  "last": '2013-07-28'
+  "commits": 0
+ruby-vagrantboxes:
+  "last": '2011-05-08'
+  "commits": 0
+landrush:
+  "last": '2014-02-03'
+  "commits": 23
+vagrant-digitalocean:
+  "last": '2014-01-28'
+  "commits": 22
+vagrant-multi-putty:
+  "last": '2014-01-12'
+  "commits": 7
+vagrant-sakura:
+  "last": '2013-10-22'
+  "commits": 0
+vagrant-exec:
+  "last": '2014-01-13'
+  "commits": 15
+vagrant-notify:
+  "last": '2014-02-22'
+  "commits": 16
+vagrant-libvirt:
+  "last": '2014-02-20'
+  "commits": 79
+vagrant-butcher:
+  "last": '2013-12-15'
+  "commits": 51
+vagrant-persistent-storage:
+  "last": '2014-01-26'
+  "commits": 15
+vagrant-mutate:
+  "last": '2014-02-01'
+  "commits": 58
+sahara:
+  "last": '2013-11-28'
+  "commits": 1
+vagrant-plugin-rightscaleshim:
+  "last": '2013-07-17'
+  "commits": 0
+vagrant-lxc:
+  "last": '2014-02-07'
+  "commits": 7
+vagrant-librarian-puppet:
+  "last": '2014-02-07'
+  "commits": 5
+vagrant-list:
+  "last": '2013-09-24'
+  "commits": 0
+vagrant-puppet-install:
+  "last": '2014-02-21'
+  "commits": 23
+vagrant-librarian-chef:
+  "last": '2014-01-22'
+  "commits": 2
+vagrant-openvz:
+  "last": '2013-10-14'
+  "commits": 0
+vagrant-niftycloud:
+  "last": '2013-08-07'
+  "commits": 0
+vagrant-cachier:
+  "last": '2014-01-08'
+  "commits": 34
+vagrant-iijgp:
+  "last": '2013-12-13'
+  "commits": 9
+vagrant-ohai:
+  "last": '2013-11-27'
+  "commits": 4
+vagrant-berkshelf:
+  "last": '2014-02-21'
+  "commits": 11
+vagrant-pristine:
+  "last": '2014-01-02'
+  "commits": 3
+vagrant-kvm:
+  "last": '2014-02-12'
+  "commits": 99+
+vagrant-hp:
+  "last": '2014-02-04'
+  "commits": 25
+vagrant-dnsmasq:
+  "last": '2013-11-26'
+  "commits": 2
+vagrant-rackspace:
+  "last": '2014-02-18'
+  "commits": 40
+vagrant-dns:
+  "last": '2014-01-03'
+  "commits": 2
+vagrant-windows:
+  "last": '2014-02-14'
+  "commits": 39
+vagrant-google:
+  "last": '2013-12-03'
+  "commits": 3

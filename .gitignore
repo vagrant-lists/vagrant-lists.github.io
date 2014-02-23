@@ -1,3 +1,4 @@
 *.bak
 *~
 _site
+_vagrantlist_config.yml
