@@ -42,7 +42,7 @@ def self.common_part(category)
   {:name=>name,:note=>note,:desc=>desc,:tags=>tags,:filename=>filename,:date=>date}
 end
 
-def put_post(filename, attribute)
+def self.put_post(filename, attribute)
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
     post.puts "---"
