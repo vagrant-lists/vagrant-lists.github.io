@@ -15,7 +15,9 @@ table{border-collapse:collapse;border-spacing:0}
 table{margin-top:20px;width:100%;background:#f8f8f8;color:#000;border:1px solid #ccc}
 table tr{border:1px solid #ddd}
 table th{text-align:left;padding:3px 6px;color:#444}
+table th a{text-decoration:none}
 table td{padding:3px 6px;color:#444}
+table td a{text-decoration:none}
 table.sortable thead {
     background-color:#eee;
     color:#666666;
