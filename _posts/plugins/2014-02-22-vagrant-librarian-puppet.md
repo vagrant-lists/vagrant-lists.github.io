@@ -6,6 +6,7 @@ description: "A Vagrant plugin to install Puppet modules using Librarian-Puppet.
 tags:
  - puppet
 date: 2014-02-22
+compat: 1.2+
 type: provisioner
 link: https://github.com/mhahn/vagrant-librarian-puppet
 ---

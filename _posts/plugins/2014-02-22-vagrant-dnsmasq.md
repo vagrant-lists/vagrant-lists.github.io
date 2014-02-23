@@ -6,6 +6,7 @@ description: "A Dnsmasq Vagrant plugin that manages the dnsmasq.conf file and /e
 tags:
  - dnsmasq
 date: 2014-02-22
+compat: 1.2.2+
 type: command
 link: https://github.com/mattes/vagrant-dnsmasq
 ---
