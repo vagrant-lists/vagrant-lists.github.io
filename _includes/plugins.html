@@ -1,18 +1,21 @@
   <table class="sortable hidable filterable">
       <thead>
-        <tr title="▲click to sort▲"><th>Name</th><th>Version</th><th>Type</th><th>Description</th><th>Docs</th><td class="tags">Tags</td></tr>
+        <tr title="▲click to sort▲"><th>Name</th><th>Version</th><th>Type</th><th>Description</th><th>Docs</th><th>Last activity</th><th class="tags">Tags</th></tr>
       </thead>
       <tbody>
         {% assign plugins = site.categories.plugins | sort: 'name' %}
         {% assign versions = site.data.plugin_versions %}
+        {% assign activities = site.data.plugin_activities %}
         {% for plugin in plugins %}
           {% assign version = versions[plugin.name] %}
+          {% assign activity = activities[plugin.name] %}
           <tr>
             <th scope="row" title="{{ plugin.link }}"><a href="{{ plugin.link }}">{{ plugin.name }}</a></th>
             <td>{{ version }}</td>
             <td>{{ plugin.type }}</td>
             <td>{{ plugin.description }}</td>
             <td class="doc" title="{{ plugin.doc }}"><a href="{{ plugin.doc }}">{{ plugin.doc | replace_first: "https://wiki.github.com/", "Wiki:"}}</a></td>
+            <td>{{ activity }}</td>
             <td class="tags">{{ plugin.tags }}</td>
           </tr>
         {% endfor %}
