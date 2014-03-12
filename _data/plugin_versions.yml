@@ -22,11 +22,11 @@ vagrant-rspec-ci: 1.0.1
 vagrant-multi-putty: 1.4.3
 vagrant-sakura: 0.0.3
 vagrant-exec: 0.3.1
-vagrant-butcher: 2.1.4
-vagrant-persistent-storage: 0.0.10
-vagrant-librarian-puppet: 0.5.0
+vagrant-butcher: 2.1.5
+vagrant-persistent-storage: 0.0.11
+vagrant-librarian-puppet: 0.6.0
 vagrant-puppet-install: 2.1.0
-vagrant-librarian-chef: 0.1.4
+vagrant-librarian-chef: 0.1.5
 vagrant-openvz: 0.0.7
 vagrant-niftycloud: 0.3.0
 vagrant-iijgp: 0.0.2
@@ -38,7 +38,7 @@ vagrant-dnsmasq: 0.0.9
 vagrant-salt: 0.4.0
 rubber: 2.7.3
 vagrant-managed-servers: 0.2.0
-vagrant-parallels: 0.2.1
+vagrant-parallels: 1.0.1
 vagrant-proxmox: 0.0.3
 docker-provider: 0.1.0
 ventriloquist: 0.4.1
@@ -50,3 +50,12 @@ vagrant-softlayer: 0.2.0
 vagrant-openstack: 0.0.4
 vagrant-fabric: 0.2.1
 vagrant-sprinkle: 0.0.2
+vagrant-cucumber: 0.0.6
+vagrant-global-status: 0.1.4
+nugrant: 1.4.2
+vagrant-camera: 0.0.1
+vagrant-mongodb: 0.1.0
+vagrant-host-path: 1.3.1
+vagrant-multiprovider-snap: 0.0.9
+vagrant-node: 1.0.0
+vagrant-nodemaster: 1.0.0
