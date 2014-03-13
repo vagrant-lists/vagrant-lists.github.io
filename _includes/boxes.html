@@ -1,20 +1,38 @@
 
     <table class="sortable hidable filterable">
+      <colgroup>
+        <col width="48%"/>
+        <col width="8%"/>
+        <col width="8%"/>
+        <col width="10%"/>
+        <col width="8%"/>
+        <col width="10%"/>
+        <col width="8%"/>
+      </colgroup>
       <thead>
-        <tr title="▲click to sort▲"><th>Name</th><th>Architecture</th><th>Provider</th><th>URL</th><th></th>
-        <th class="sorttable_numeric">Size</th><th>Registered</th></tr>
+        <tr title="▲click to sort▲">
+          <th>Name</br>URL</th>
+          <th>OS</th>
+          <th>Architecture</th>
+          <th>Provider</th>
+          <th class="sorttable_numeric">Size</th>
+          <th>Registered</th>
+          <th>Submited by</th>
+        </tr>
       </thead>
       <tbody>
         {% assign boxes = site.categories.boxes | sort: 'name' %}
         {% for box in boxes %}
           <tr>
-            <th scope="row" title="{{ box.name | strip_html }}">{{ box.description }}</th>
+            <td scope="row" title="{{ box.name | strip_html }}">{{ box.description }}
+  <br/><button class="zeroclipboard-button" data-clipboard-text="{{ box.link }}" trigger-title="Done" title="Copy to clipboard"><x-small>Copy</x-small></button>&nbsp;&nbsp;<a title="{{ box.link }}" href="{{ box.link }}">{{ box.link | replace_first: 'http://','' | replace_first: 'https://','' | truncate: 50 }}</a>
+  </td>
+            <td>{{ box.os }}</td>
             <td>{{ box.arch }}</td>
             <td>{{ box.provider }}</td>
-            <td><a title="{{ box.link }}" href="{{ box.link }}">{{ box.link | replace_first: 'http://','' | replace_first: 'https://','' | truncate: 30 }}</a></td>
-            <td><button class="zeroclipboard-button" data-clipboard-text="{{ box.link }}" trigger-title="Done" title="Copy to clipboard"><x-small>Copy</x-small></button></td>
             <td>{{ box.size }}</td>
             <td>{{ box.date | date_to_string }}</td>
+            <td><a title="{{ box.submitter }}" href="{{ box.submitter }}">{{ box.submitter | replace_first: 'https://github.com/','@' | replace_first: 'https://twitter.com/','@' }}</a></td>
           </tr>
         {% endfor %}
       </tbody>

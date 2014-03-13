@@ -1,0 +1,23 @@
+  <table class="sortable hidable filterable">
+      <colgroup>
+        <col width="20%"/>
+        <col width="15%"/>
+        <col width="65%"/>
+      </colgroup>
+      <thead>
+        <tr><th>Name</th><th>Version</th><th>Description</th>
+</tr>
+      </thead>
+      <tbody>
+        {% assign plugins = site.categories.plugins | sort: 'name' %}
+        {% assign versions = site.data.plugin_versions %}
+        {% for plugin in plugins %}
+          {% assign version = versions[plugin.name] %}
+          <tr>
+            <th scope="row" title="{{ plugin.link }}"><a href="{{ plugin.link }}">{{ plugin.name }}</a></th>
+            <td>{{ version }}</td>
+            <td>{{ plugin.description }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+  </table>
