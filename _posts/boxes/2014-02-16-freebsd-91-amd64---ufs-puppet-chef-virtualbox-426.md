@@ -11,5 +11,7 @@ tags:
  -  puppet
  -  chef
  -  virtualbox
+provider: VirtualBox
 note: fixed #95
+submitter: https://github.com/mss
 ---
