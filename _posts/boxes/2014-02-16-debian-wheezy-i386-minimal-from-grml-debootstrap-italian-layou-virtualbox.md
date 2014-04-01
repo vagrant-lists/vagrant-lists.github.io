@@ -12,4 +12,5 @@ arch: i686
 tags:
 - debian
 date: '2014-02-16'
+submitter: https://github.com/pixline
 ---
