@@ -12,4 +12,5 @@ tags:
 - puppet
 - chef
 date: '2014-02-16'
+submitter: https://github.com/stoilis
 ---

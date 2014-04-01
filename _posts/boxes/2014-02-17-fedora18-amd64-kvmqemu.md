@@ -11,4 +11,5 @@ link: https://vagrant-kvm-boxes.s3.amazonaws.com/fedora18-amd64-kvm.box
 size: 800MB
 arch: x86_64
 provider: Vagrant-KVM
+submitter: https://github.com/miurahr
 ---

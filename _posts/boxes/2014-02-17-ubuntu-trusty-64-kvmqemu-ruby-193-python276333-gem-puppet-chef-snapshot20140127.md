@@ -12,4 +12,5 @@ link: https://vagrant-kvm-boxes.s3.amazonaws.com/trusty64_kvm.box
 size: 369MB
 arch: x86_64
 provider: Vagrant-KVM
+submitter: https://github.com/miurahr
 ---
