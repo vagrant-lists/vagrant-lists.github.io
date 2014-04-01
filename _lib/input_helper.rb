@@ -42,7 +42,7 @@ def self.ask_plugin_type
 end
 
 def self.ask_single_provider
-  case ask("Provider?(_Virtualbox, v_Mware, _Lxc, _Kvm, libv_Irt)", ['v','m','l','k','i'])
+  case ask("Provider?(_Virtualbox, v_Mware, _Lxc, _Kvm, libv_Irt,_Parallels)", ['v','m','l','k','i','p'])
   when 'v'
     provider = "VirtualBox"
   when 'm'
@@ -53,6 +53,8 @@ def self.ask_single_provider
     provider = "Vagrant-KVM"
   when 'i'
     provider = "Vagrant-libvirt"
+  when 'p'
+    provider = "Parallels"
   else
     provider = "unknown"
   end
