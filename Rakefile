@@ -26,6 +26,7 @@ task :box do
   atts[:size] = InputHelper.get_stdin("Size?(eg. 100MB)")
   atts[:arch] = InputHelper.ask_arch
   atts[:provider] = InputHelper.ask_single_provider
+  atts[:committer] = InputHelper.get_stdin("committer?")
   CommonHelper.put_post(atts[:filename], atts)
 end # task :box
 
