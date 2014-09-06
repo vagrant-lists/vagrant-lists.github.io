@@ -1,7 +1,7 @@
   <table class="sortable hidable filterable">
       <thead>
         <tr title="▲click to sort▲"><th>Name</th><th>Version</th><th>Type</th><th>Description</th>
-        <th title="Vagrant compat version">Compat</th><th title="commits in last 3month">Activity</th><th class="tags">Tags</th></tr>
+        <th title="Vagrant compat version">Compat</th><th class="tags">Tags</th></tr>
       </thead>
       <tbody>
         {% assign plugins = site.categories.plugins | sort: 'name' %}
@@ -9,14 +9,12 @@
         {% assign activities = site.data.plugin_activities %}
         {% for plugin in plugins %}
           {% assign version = versions[plugin.name] %}
-          {% assign activity = activities[plugin.name]["commits"] %}
           <tr>
             <th scope="row" title="{{ plugin.link }}"><a href="{{ plugin.link }}">{{ plugin.name }}</a></th>
             <td>{{ version }}</td>
             <td>{{ plugin.type }}</td>
             <td>{{ plugin.description }}</td>
             <td>{{ plugin.compat }}</td>
-            <td>{{ activity }}</td>
             <td class="tags">{{ plugin.tags }}</td>
           </tr>
         {% endfor %}
