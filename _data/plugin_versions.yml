@@ -60,3 +60,4 @@ vagrant-multiprovider-snap: 0.0.11
 vagrant-node: 1.0.0
 vagrant-nodemaster: 1.0.0
 vagrant-joyent: 0.3.0
+vagrant-linode: 0.1.0
