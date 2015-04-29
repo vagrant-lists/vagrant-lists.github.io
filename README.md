@@ -55,3 +55,12 @@ $ rake preview
 
 You can see the result with browser pointing `localhost:4000`
 
+## update plugin status
+
+First you need to create `_vagrantlist_config.yml` file from `_vagrantlist_config.yml.template` and edit credentials to access github.
+
+```
+$ rake plugin_activity
+```
+
+This will update `_data/plugin_activities.yml` and `_data/plugin_versions.yml`
