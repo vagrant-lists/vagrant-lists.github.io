@@ -41,6 +41,8 @@ def self.github_activities(gh_url)
   if commits == 0 # no activity last 3 month
     # get latest activity
     com = get_commits_github_api(gh_path[1],gh_path[2])
+    # return unknown when fails to  get
+    return {"last" => "unknown", "commits" => "unknown"} if com.length == 0
   elsif commits == 100
     commits = "99+"
   end
@@ -64,6 +66,7 @@ def self.get_commits_github_api(user, repo, since=nil)
     }
   rescue OpenURI::HTTPError => ex
     puts "Missing github link!"
+    puts req_url
   end
   res
 end
