@@ -1,118 +1,205 @@
 ---
 lh-vagrant-dns:
-  "last": '2013-05-10'
-  "commits": 0
+  last: '2013-05-10'
+  commits: 0
 vagrant-aws:
-  "last": '2013-12-17'
-  "commits": 13
+  last: '2015-01-27'
+  commits: 0
 vagrant-cloudstack:
-  "last": '2014-02-21'
-  "commits": 30
+  last: unknown
+  commits: unknown
 vagrant-vcloud:
-  "last": '2014-01-21'
-  "commits": 7
+  last: '2015-01-28'
+  commits: 0
 vagrant-hosts:
-  "last": '2013-12-24'
-  "commits": 6
+  last: '2015-03-07'
+  commits: 2
 vagrant-rspec-ci:
-  "last": '2013-07-28'
-  "commits": 0
+  last: '2014-11-27'
+  commits: 0
 ruby-vagrantboxes:
-  "last": '2011-05-08'
-  "commits": 0
+  last: '2011-05-08'
+  commits: 0
 landrush:
-  "last": '2014-02-03'
-  "commits": 23
+  last: '2015-04-23'
+  commits: 6
 vagrant-digitalocean:
-  "last": '2014-01-28'
-  "commits": 22
+  last: '2015-02-07'
+  commits: 8
 vagrant-multi-putty:
-  "last": '2014-01-12'
-  "commits": 7
+  last: '2014-08-31'
+  commits: 0
 vagrant-sakura:
-  "last": '2013-10-22'
-  "commits": 0
+  last: '2015-02-19'
+  commits: 4
 vagrant-exec:
-  "last": '2014-01-13'
-  "commits": 15
+  last: '2015-02-10'
+  commits: 3
 vagrant-notify:
-  "last": '2014-02-22'
-  "commits": 16
+  last: '2014-02-27'
+  commits: 0
 vagrant-libvirt:
-  "last": '2014-02-20'
-  "commits": 79
+  last: '2015-04-21'
+  commits: 73
 vagrant-butcher:
-  "last": '2013-12-15'
-  "commits": 51
+  last: '2014-12-15'
+  commits: 0
 vagrant-persistent-storage:
-  "last": '2014-01-26'
-  "commits": 15
+  last: '2015-01-06'
+  commits: 0
 vagrant-mutate:
-  "last": '2014-02-01'
-  "commits": 58
+  last: '2015-03-15'
+  commits: 3
 sahara:
-  "last": '2013-11-28'
-  "commits": 1
+  last: '2014-06-18'
+  commits: 0
 vagrant-plugin-rightscaleshim:
-  "last": '2013-07-17'
-  "commits": 0
+  last: '2014-03-10'
+  commits: 0
 vagrant-lxc:
-  "last": '2014-02-07'
-  "commits": 7
+  last: '2015-04-06'
+  commits: 12
 vagrant-librarian-puppet:
-  "last": '2014-02-07'
-  "commits": 5
+  last: '2015-01-30'
+  commits: 2
 vagrant-list:
-  "last": '2013-09-24'
-  "commits": 0
+  last: '2013-09-24'
+  commits: 0
 vagrant-puppet-install:
-  "last": '2014-02-21'
-  "commits": 23
+  last: unknown
+  commits: unknown
 vagrant-librarian-chef:
-  "last": '2014-01-22'
-  "commits": 2
+  last: '2014-07-15'
+  commits: 0
 vagrant-openvz:
-  "last": '2013-10-14'
-  "commits": 0
+  last: '2013-10-14'
+  commits: 0
 vagrant-niftycloud:
-  "last": '2013-08-07'
-  "commits": 0
+  last: '2013-08-07'
+  commits: 0
 vagrant-cachier:
-  "last": '2014-01-08'
-  "commits": 34
+  last: '2014-01-08'
+  commits: 0
 vagrant-iijgp:
-  "last": '2013-12-13'
-  "commits": 9
+  last: '2014-02-27'
+  commits: 0
 vagrant-ohai:
-  "last": '2013-11-27'
-  "commits": 4
+  last: '2015-04-13'
+  commits: 13
 vagrant-berkshelf:
-  "last": '2014-02-21'
-  "commits": 11
+  last: '2015-03-29'
+  commits: 7
 vagrant-pristine:
-  "last": '2014-01-02'
-  "commits": 3
+  last: '2015-04-21'
+  commits: 1
 vagrant-kvm:
-  "last": '2014-02-12'
-  "commits": 99+
+  last: '2014-02-12'
+  commits: 99+
 vagrant-hp:
-  "last": '2014-02-04'
-  "commits": 25
+  last: '2014-05-25'
+  commits: 0
 vagrant-dnsmasq:
-  "last": '2013-11-26'
-  "commits": 2
+  last: '2015-02-17'
+  commits: 2
 vagrant-rackspace:
-  "last": '2014-02-18'
-  "commits": 40
+  last: '2015-01-14'
+  commits: 0
 vagrant-dns:
-  "last": '2014-01-03'
-  "commits": 2
+  last: '2015-03-22'
+  commits: 2
 vagrant-windows:
-  "last": '2014-02-14'
-  "commits": 39
+  last: '2014-05-07'
+  commits: 0
 vagrant-google:
-  "last": '2013-12-03'
-  "commits": 3
+  last: '2015-04-22'
+  commits: 22
 vagrant-linode:
-  "last": '2015-04-14'
-  "commits": 287
+  last: '2015-04-27'
+  commits: 5
+vagrant-softlayer:
+  last: '2015-04-20'
+  commits: 3
+docker-provider:
+  last: '2014-04-17'
+  commits: 0
+vagrant-hostmanager:
+  last: '2014-08-27'
+  commits: 0
+vagrant-hostsupdater:
+  last: '2013-10-31'
+  commits: 0
+vagrant-joyent:
+  last: unknown
+  commits: unknown
+vagrant-managed-servers:
+  last: '2015-04-02'
+  commits: 39
+vagrant-openstack:
+  last: '2015-03-23'
+  commits: 2
+vagrant-parallels:
+  last: '2015-04-20'
+  commits: 17
+vagrant-proxmox:
+  last: '2015-01-12'
+  commits: 0
+vagrant-vsphere:
+  last: '2015-01-06'
+  commits: 0
+copy-my-conf:
+  last: '2013-07-06'
+  commits: 0
+rubber:
+  last: '2015-04-28'
+  commits: 25
+vagrant-baseline:
+  last: '2014-06-24'
+  commits: 0
+vagrant-fabric:
+  last: '2015-03-21'
+  commits: 2
+vagrant-salt:
+  last: '2013-10-30'
+  commits: 0
+vagrant-sprinkle:
+  last: '2014-05-21'
+  commits: 0
+ventriloquist:
+  last: '2014-08-22'
+  commits: 0
+vocker:
+  last: '2014-03-04'
+  commits: 0
+nugrant:
+  last: '2015-01-13'
+  commits: 0
+vagrant-camera:
+  last: '2013-11-21'
+  commits: 0
+vagrant-cucumber:
+  last: '2015-04-20'
+  commits: 2
+vagrant-global-status:
+  last: '2014-03-15'
+  commits: 0
+vagrant-host-path:
+  last: '2013-11-08'
+  commits: 0
+vagrant-mongodb:
+  last: '2013-04-09'
+  commits: 0
+vagrant-multiprovider-snap:
+  last: '2014-10-09'
+  commits: 0
+vagrant-node:
+  last: '2015-02-06'
+  commits: 1
+vagrant-nodemaster:
+  last: '2015-02-06'
+  commits: 1
+vagrantweb:
+  last: '2015-02-19'
+  commits: 7
+vagrant-r10k:
+  last: '2015-04-22'
+  commits: 20
