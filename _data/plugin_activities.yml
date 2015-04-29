@@ -113,3 +113,6 @@ vagrant-windows:
 vagrant-google:
   "last": '2013-12-03'
   "commits": 3
+vagrant-linode:
+  "last": '2015-04-14'
+  "commits": 287
