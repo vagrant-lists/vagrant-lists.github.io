@@ -143,6 +143,9 @@ vagrant-parallels:
 vagrant-proxmox:
   last: '2015-01-12'
   commits: 0
+vagrant-rimu:
+  last: '2015-12-02'
+  commits: 166
 vagrant-vsphere:
   last: '2015-01-06'
   commits: 0
